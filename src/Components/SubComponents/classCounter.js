@@ -12,6 +12,18 @@ class ClassCounter extends React.Component {
     this.state = { counter: 0, title: "inicial" };
   }
 
+  componentDidMount() {
+    console.log("Mounted");
+  }
+
+  componentDidUpdate() {
+    console.log("Update");
+  }
+
+  componentWillMount() {
+    console.log("Unmounting");
+  }
+
   sumFunction = () => {
     this.setState({ counter: this.state.counter + 1 });
   };
@@ -21,7 +33,9 @@ class ClassCounter extends React.Component {
       <CenterContainer>
         <PaperContainer elevation={3}>
           {this.props.title}
-          {this.props.secondTitle}
+
+          <CenterContainer> {this.state.counter}</CenterContainer>
+
           <ButtonContainer>
             <MainButton
               onClick={() => this.sumFunction()}

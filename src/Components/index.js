@@ -14,7 +14,7 @@ function Home() {
       <TitleWrapper primary>
         <RedTitle>React Hooks</RedTitle>
       </TitleWrapper>
-      <Counter title="Comienzo de la demo de Hooks"></Counter>
+      <ClassCounter title="Comienzo de la demo de Hooks"></ClassCounter>
     </HomeContainer>
   );
 }
